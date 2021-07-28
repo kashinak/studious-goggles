@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+@font-face {
+    font-family: 'FishOutOfWater';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url("/assets/css/fonts/FishOutOfWater-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'FishOutOfWaterBold';
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    src: url("/assets/css/fonts/FishOutOfWater-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'FishOutOfWaterDemiBold';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url("/assets/css/fonts/FishOutOfWater-Demibold.woff") format("woff");
+}
+
+body {
+    background-color: #007bff;
+    color: #00ffef;
+}
+
+header {
+    margin-top: 0;
+    background-color: darkblue;
+}
+
+header, h1 {
+    font-family: 'FishOutOfWaterBold', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 90px;
+    color: #01ffff;
+    text-align: center;
+    padding-top: 30px;
+}
+
+header, h2 {
+    font-family: 'FishOutOfWaterDemiBold', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 75px;
+    color:#01ffffe4;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+
+/* code snippet from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-vertical2_btn */
+.container {
+  position: relative;
+  margin-bottom: 230px;
+} 
+    
+/* code snippet from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-vertical2_btn */
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+} 
+
+/* code snipper from Code Insitutute 'Method Chaining - Challenge 2' */
+#wrapper {
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1050px;
+}
+
+@media screen and (min-width: 1200px) {
+    #wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 10px;
+    }
+}
+/* code snipper from Code Insitutute 'Method Chaining - Challenge 2' */
+.card {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #00008b;
+}
+
+
+.card p {
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+#instructions {
+    margin-bottom: 15px;
+    margin-top: 45px;
+    display: none;
+}
+
+#game-area {
+    margin-top: 55px;
+    margin-bottom: 50px;
+}
+
+button, #how-to {
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    background-color: #0000ff;
+    text-align: center;
+    /* padding: 1em .75em; */
+    text-decoration: none;
+    color: #02e5f3;
+    font-size: 2em;
+    font-family: 'FishOutOfWaterDemiBold', Arial, sans-serif;
+}
+
+#topleft, #topright, #bottomleft, #bottomright {
+    padding: 0;
+    border: 10px solid #00ffff;
+}
+
+/* code snippet modeled after from https://codeinstitute.com/ Rosie resume tutorial */
+
+#game-photo-1 {
+    background: url("../images/beluga.jpeg");
+    background-size: cover;
+    background-position: center;
+    min-height: 360px;
+    background-repeat: no-repeat;
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+}
+
+#game-photo-2 {
+    background: url("../images/orca.jpeg");
+    background-size: cover;
+    background-position: center;
+    min-height: 360px;
+    background-repeat: no-repeat;
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+    
+}
+
+#game-photo-3 {
+    background: url("../images/rightwhale.jpeg");
+    background-size: cover;
+    background-position: center;
+    min-height: 360px;
+    background-repeat: no-repeat;
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+   
+} 
+
+#game-photo-4 {
+    background: url("../images/spermwhale.jpeg");
+    background-size: cover;
+    background-position: center;
+    min-height: 360px;
+    background-repeat: no-repeat;
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+ 
+}
+
+
+.btn {
+    padding-right: 150px;
+    padding-left: 150px;
+    border-radius: 0;
+}
+
+.btn p {
+    font-family: 'Michroma', sans-serif;
+    font-weight: bold;
+    font-size: 27px;
+    color: azure;
+}
+
+.btn-warning {
+    color: #7dfff4;
+    background-color: #00008b;
+    border-radius: 1rem;
+    font-family: 'Michroma';
+    font-weight: bold;
+    font-size: 28px;
+}
+  
+/* score area */
+/* modeled after Exeideas tutorial on responsive tables https://www.exeideas.com/2020/10/simple-responsive-html-table.html#Customization */
+table {
+    border: 1px solid #02e5f3;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    font-family: 'Michroma';
+}
+
+table tr {
+background-color: #00008b;
+padding: .35em;
+}
+
+table th,
+table td {
+padding: .625em;
+text-align: center;
+font-family: 'Michroma';
+}
+
+table th {
+font-size: .85em;
+letter-spacing: .1em;
+text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+table {
+border: 0;
+}
+
+table caption {
+font-size: 1.3em;
+}
+
+table thead {
+border: none;
+clip: rect(0 0 0 0);
+height: 1px;
+margin: -1px;
+overflow: hidden;
+padding: 0;
+position: absolute;
+width: 1px;
+}
+
+table tr {
+border-bottom: 3px solid #ddd;
+display: block;
+margin-bottom: .625em;
+}
+
+table td {
+border-bottom: 1px solid #ddd;
+display: block;
+font-size: .8em;
+text-align: right;
+}
+
+table td::before {
+content: attr(data-label);
+float: left;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+table td:last-child {
+border-bottom: 0;
+}
