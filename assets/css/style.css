@@ -40,7 +40,8 @@ header, h1 {
     font-size: 90px;
     color: #01ffff;
     text-align: center;
-    padding-top: 30px;
+    margin-bottom: 0px;
+    /* padding-top: 30px; */
 }
 
 header, h2 {
@@ -49,14 +50,34 @@ header, h2 {
     font-size: 75px;
     color:#01ffffe4;
     text-align: center;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
+}
+#game-area {
+    margin-top: 55px;
+    margin-bottom: 50px;
 }
 
+/* code snippet modeled after from https://codeinstitute.com/ Rosie resume tutorial */
+
+#game-photo-1, #game-photo-2, #game-photo-3, #game-photo-4 {
+    background-size: cover;
+    /* background-size: contain; */
+    background-position: center;
+    min-height: 360px;
+    background-repeat: no-repeat;
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+}
 
 /* code snippet from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-vertical2_btn */
 .container {
   position: relative;
   margin-bottom: 230px;
+  /* display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); */
+  /* grid-gap: 1em; */
+
 } 
     
 /* code snippet from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-vertical2_btn */
@@ -104,10 +125,8 @@ header, h2 {
     margin-top: 45px;
     display: none;
 }
-
-#game-area {
-    margin-top: 55px;
-    margin-bottom: 50px;
+#how-to-div {
+    margin-bottom: 0px;
 }
 
 button, #how-to {
@@ -129,59 +148,34 @@ button, #how-to {
     border: 10px solid #00ffff;
 }
 
-/* code snippet modeled after from https://codeinstitute.com/ Rosie resume tutorial */
+/* @media screen and (max-width: 380px) {
+    #game-photo-1, #game-photo-2, #game-photo-3, #game-photo-4 {
+        width: auto;
+        float: none;
+        margin: 0;
+        height: 95px;
+    }
+  } */
 
 #game-photo-1 {
     background: url("../images/beluga.jpeg");
-    background-size: cover;
-    background-position: center;
-    min-height: 360px;
-    background-repeat: no-repeat;
-    z-index: -1;
-    text-align: center;
-    width: 100%;
 }
 
 #game-photo-2 {
     background: url("../images/orca.jpeg");
-    background-size: cover;
-    background-position: center;
-    min-height: 360px;
-    background-repeat: no-repeat;
-    z-index: -1;
-    text-align: center;
-    width: 100%;
-    
 }
 
 #game-photo-3 {
     background: url("../images/rightwhale.jpeg");
-    background-size: cover;
-    background-position: center;
-    min-height: 360px;
-    background-repeat: no-repeat;
-    z-index: -1;
-    text-align: center;
-    width: 100%;
-   
 } 
 
 #game-photo-4 {
     background: url("../images/spermwhale.jpeg");
-    background-size: cover;
-    background-position: center;
-    min-height: 360px;
-    background-repeat: no-repeat;
-    z-index: -1;
-    text-align: center;
-    width: 100%;
- 
 }
 
-
 .btn {
-    padding-right: 150px;
-    padding-left: 150px;
+    /* padding-right: 150px;
+    padding-left: 150px; */
     border-radius: 0;
 }
 
@@ -195,7 +189,7 @@ button, #how-to {
 .btn-warning {
     color: #7dfff4;
     background-color: #00008b;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
     font-family: 'Michroma';
     font-weight: bold;
     font-size: 28px;
@@ -274,3 +268,46 @@ text-transform: uppercase;
 table td:last-child {
 border-bottom: 0;
 }
+
+@media screen and (max-width: 768px) {
+    header, h1 {
+      font-size: 60px;
+      width: 100%;
+    }
+    header, h2 {
+        font-size: 35px;
+        width: 100%;
+      }
+      #game-area {
+        margin-top: 10px;
+    }
+    #rest-button {
+        display:grid;
+    }
+  }
+
+@media screen and (max-width: 540px) {
+    header, h1 {
+      font-size: 40px;
+      width: 100%;
+      }
+    header, h2 {
+      font-size: 25px;
+      width: 100%;
+      }
+    #how-to-button {
+      font-size: 1em;
+      }
+    #game-area {
+      margin-top: 10px;
+      }
+    #game-photo-1, #game-photo-2, #game-photo-3, #game-photo-4 {
+      min-height: 180px;
+      }
+    #game-area, .row, .panel p {
+        font-size: 17px;
+      }
+    .btn, .btn-lg, .btn-warning {
+          font-size: 17px;
+      }
+  }
