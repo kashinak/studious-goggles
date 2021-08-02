@@ -31,23 +31,6 @@
             </div>
         </div>
     </header>
-    <button id="how-to-button">How to Play:</button>
-    <div class="container" id="how-to-div">
-        <div id="wrapper">
-            <div class="card" id="instructions">
-                <h2>Game Instructions</h2>
-                <ul>
-                    <li>Wait for the computer to play a sequence of highlighted photos begining with one photo.</li>
-                    <li>Repeat the game sequence by pressing on corresponding photos. </li>
-                    <li>After each round the computer will generate the same sequence, adding one additional photo click.</li>
-                    <li>You win after 20 rounds!</li>
-                    <li>Game over when you press a photo out of game sequence.</li>
-                </ul>
-                <p>Play the Game! Good Luck!</p>
-            </div>
-        </div>
-    </div>
-
     <div class="container" id="game-area">
         <div class="row">
             <div class="col-6 panel" id="topleft">
@@ -79,7 +62,7 @@
             </div>
             <div class="center start-game" id="start">
                 <audio class="hidden" src=""></audio>
-                <button class="btn btn-lg btn-warning">Start Game!</button>
+                <button class="btn btn-lg btn-warning">start game!</button>
             </div>
             <!-- <div class="center start-game" id="game-over">
                 <h1></h1>
@@ -88,22 +71,52 @@
 
     </div>
     <!-- modeled code after Exeideas tutorial on responsive tables https://www.exeideas.com/2020/10/simple-responsive-html-table.html#Customization -->
-    <table>
-        <thead>
-            <tr>
-                <th scope="col"><button type="button" class="btn btn-outline-warning" id="reset-button">Game Reset</button></th>
-                <th scope="col">Round</th>
-                <!-- <th scope="col">High Score</th> -->
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td id="score"></td>
-                <td id="round">0</td>
-                <!-- <td data-label="high-score" id="high-score-text">0 points</td> -->
-            </tr>
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="row">
+            <div class="col my-col">
+                <button type="button" class="btn btn-outline-warning" id="reset-button">game reset</button>
+            </div>
+            <div class="col my-col">
+                <button type="button" class="btn btn-outline-primary">how to play</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col my-col" id="score-board">
+                <span>Round</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col my-col" id="round">
+                <span></span>
+            </div>
+        </div>
+    </div>
+  
+
+           
+            
+   
+  
+<!--            
+                    <div class="container" id="how-to-div">
+                        <div id="wrapper">
+                            <div class="card" id="instructions">
+                                <h2>Game Instructions</h2>
+                                <ul>
+                                    <li>Wait for the computer to play a sequence of highlighted photos begining with one photo.</li>
+                                    <li>Repeat the game sequence by pressing on corresponding photos. </li>
+                                    <li>After each round the computer will generate the same sequence, adding one additional photo click.</li>
+                                    <li>You win after 20 rounds!</li>
+                                    <li>Game over when you press a photo out of game sequence.</li>
+                                </ul>
+                                <p>Play the Game! Good Luck!</p>
+                            </div>
+                        </div>
+                    </div> -->
+               
+          
+    
+
     <script type="text/javascript" src="assets/js/script.js"></script>
     <!-- <script type="text/javascript" src="assets/js/jquery-3.2.1.js"></script> -->
     <script type="text/javascript" src="assets/js/jquery-3.6.0.js"></script>

@@ -73,7 +73,7 @@ header, h2 {
 /* code snippet from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_center-vertical2_btn */
 .container {
   position: relative;
-  margin-bottom: 230px;
+  /* margin-bottom: 230px; */
   /* display:grid;
   grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); */
   /* grid-gap: 1em; */
@@ -92,7 +92,7 @@ header, h2 {
 } 
 
 /* code snipper from Code Insitutute 'Method Chaining - Challenge 2' */
-#wrapper {
+/* #wrapper {
     box-sizing: border-box;
     margin-right: auto;
     margin-left: auto;
@@ -105,14 +105,14 @@ header, h2 {
         grid-template-columns: 1fr;
         grid-column-gap: 10px;
     }
-}
+} */
+
 /* code snipper from Code Insitutute 'Method Chaining - Challenge 2' */
-.card {
+/* .card {
     margin-top: 10px;
     padding: 20px;
     background-color: #00008b;
 }
-
 
 .card p {
     text-align: center;
@@ -127,21 +127,9 @@ header, h2 {
 }
 #how-to-div {
     margin-bottom: 0px;
-}
+} */
 
-button, #how-to {
-    box-sizing: border-box;
-    border-radius: 4px;
-    display: block;
-    width: 100%;
-    background-color: #0000ff;
-    text-align: center;
-    /* padding: 1em .75em; */
-    text-decoration: none;
-    color: #02e5f3;
-    font-size: 2em;
-    font-family: 'FishOutOfWaterDemiBold', Arial, sans-serif;
-}
+
 
 #topleft, #topright, #bottomleft, #bottomright {
     padding: 0;
@@ -173,10 +161,27 @@ button, #how-to {
     background: url("../images/spermwhale.jpeg");
 }
 
-.btn {
-    /* padding-right: 150px;
-    padding-left: 150px; */
-    border-radius: 0;
+.my-col {
+    text-align: center;
+}
+
+#score-board {
+    top: 30px; 
+    font-size: 25px; 
+    border:2px solid;
+    text-transform:uppercase;
+    font-family: 'Michroma';
+    background: #00008b;
+}
+
+#round {
+    top: 30px; 
+    font-size: 35px; 
+    border:2px solid;
+    text-transform:uppercase;
+    font-family: 'Michroma';
+    background: #0000ff;
+    min-height: 60px;
 }
 
 .btn p {
@@ -193,82 +198,20 @@ button, #how-to {
     font-family: 'Michroma';
     font-weight: bold;
     font-size: 28px;
+    text-transform: uppercase;
+}
+
+.btn-outline-warning {
+    text-transform: uppercase;
+}
+
+.btn-outline-primary {
+    text-transform: uppercase;
+    color: #01ffff;
+    background-color: #00008b;
+    border-color: #01ffff;
 }
   
-/* score area */
-/* modeled after Exeideas tutorial on responsive tables https://www.exeideas.com/2020/10/simple-responsive-html-table.html#Customization */
-table {
-    border: 1px solid #02e5f3;
-    border-collapse: collapse;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    table-layout: fixed;
-    font-family: 'Michroma';
-}
-
-table tr {
-background-color: #00008b;
-padding: .35em;
-}
-
-table th,
-table td {
-padding: .625em;
-text-align: center;
-font-family: 'Michroma';
-}
-
-table th {
-font-size: .85em;
-letter-spacing: .1em;
-text-transform: uppercase;
-}
-
-@media screen and (max-width: 600px) {
-table {
-border: 0;
-}
-
-table caption {
-font-size: 1.3em;
-}
-
-table thead {
-border: none;
-clip: rect(0 0 0 0);
-height: 1px;
-margin: -1px;
-overflow: hidden;
-padding: 0;
-position: absolute;
-width: 1px;
-}
-
-table tr {
-border-bottom: 3px solid #ddd;
-display: block;
-margin-bottom: .625em;
-}
-
-table td {
-border-bottom: 1px solid #ddd;
-display: block;
-font-size: .8em;
-text-align: right;
-}
-
-table td::before {
-content: attr(data-label);
-float: left;
-font-weight: bold;
-text-transform: uppercase;
-}
-
-table td:last-child {
-border-bottom: 0;
-}
-
 @media screen and (max-width: 768px) {
     header, h1 {
       font-size: 60px;
@@ -281,9 +224,6 @@ border-bottom: 0;
       #game-area {
         margin-top: 10px;
     }
-    #rest-button {
-        display:grid;
-    }
   }
 
 @media screen and (max-width: 540px) {
@@ -294,9 +234,6 @@ border-bottom: 0;
     header, h2 {
       font-size: 25px;
       width: 100%;
-      }
-    #how-to-button {
-      font-size: 1em;
       }
     #game-area {
       margin-top: 10px;
