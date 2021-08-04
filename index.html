@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whale Song Game</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+  
     <!--Bootstrap 4.2.1 documentation required CSS scripts-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!--Bootstrap 4.2.1 documentation required JS scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -34,13 +34,13 @@
     <div class="container" id="game-area">
         <div class="row">
             <div class="col-6 panel" id="topleft">
-                <button class="btn" id="game-photo-1">
+                <button class="btn myFlexedImage" id="game-photo-1">
                     <audio src="/assets/audio/beluga_short.mp3" id="beluga-sound"></audio>
                     <p>Beluga Whale</p>
                 </button>
             </div>
             <div class="col-6 panel" id="topright">
-                <button class="btn" id="game-photo-2">
+                <button class="btn myFlexedImage" id="game-photo-2">
                     <audio class="hidden" src="/assets/audio/orca_short.mp3" id="orca-sound"></audio>
                     <p>Orca Whale</p>
                 </button>
@@ -49,13 +49,13 @@
             <!-- <div class="w-100"></div> -->
         <div class="row">
             <div class="col-6 panel" id="bottomleft">
-                <button class="btn" id="game-photo-3">
+                <button class="btn myFlexedImage" id="game-photo-3">
                     <audio class="hidden" src="/assets/audio/north_atlantic_right_whale_short.mp3" id="rightwhale-sound"></audio>
                     <p>Right Whale</p>
                 </button>
             </div>
             <div class="col-6 panel" id="bottomright">
-                <button class="btn" id="game-photo-4">
+                <button class="btn myFlexedImage" id="game-photo-4">
                     <audio class="hidden" src="/assets/audio/sperm_whale_short.mp3" id="spermwhale-sound" data-sound="yellow"></audio>
                     <p>Sperm Whale</p>
                 </button>
@@ -77,7 +77,10 @@
                 <button type="button" class="btn btn-outline-warning" id="reset-button">game reset</button>
             </div>
             <div class="col my-col">
-                <button type="button" class="btn btn-outline-primary">how to play</button>
+                  <!-- Popover #1 -->
+                  <!-- code snippet from 'Jack' on Stack Overflow https://stackoverflow.com/questions/13202762/html-inside-twitter-bootstrap-popover  and JSFiddle http://jsfiddle.net/z824fn6b/ -->
+  <a href="#" class="btn btn-outline-primary" tabindex="0" data-toggle="popover" data-trigger="focus" data-popover-content="#a1" data-placement="top">how to play</a>
+               
             </div>
         </div>
         <div class="row">
@@ -91,35 +94,29 @@
             </div>
         </div>
     </div>
-  
+    <audio class="hidden" src="/assets/audio/bonus_win.mp3" id="win-game-sound"></audio>
+    <audio class="hidden" src="/assets/audio/short_game_over.mp3" id="lose-game-sound"></audio>
 
-           
-            
-   
-  
-<!--            
-                    <div class="container" id="how-to-div">
-                        <div id="wrapper">
-                            <div class="card" id="instructions">
-                                <h2>Game Instructions</h2>
-                                <ul>
-                                    <li>Wait for the computer to play a sequence of highlighted photos begining with one photo.</li>
-                                    <li>Repeat the game sequence by pressing on corresponding photos. </li>
-                                    <li>After each round the computer will generate the same sequence, adding one additional photo click.</li>
-                                    <li>You win after 20 rounds!</li>
-                                    <li>Game over when you press a photo out of game sequence.</li>
-                                </ul>
-                                <p>Play the Game! Good Luck!</p>
-                            </div>
-                        </div>
-                    </div> -->
-               
-          
-    
+<!-- Content for Popover #1 -->
+ <!-- code snippet from 'Jack' on Stack Overflow https://stackoverflow.com/questions/13202762/html-inside-twitter-bootstrap-popover  and JSFiddle http://jsfiddle.net/z824fn6b/ -->
+    <div id="a1" class="hidden">
+        <div class="popover-header" id="a1-heading">Game Instructions</div>
 
+        <div class="popover-body" id="a1-body">
+            <ul>
+                <li>Wait for the computer to play a sequence of blinking photos and whale sounds.</li>
+                <li>Mimic the game sequence order by pressing on corresponding photos. </li>
+                <li>After each round, the game will generate the previous sequence plus one additional photo/sound. </li>
+                <li>YOU WIN after 20 rounds!</li>
+                <li>GAME OVER if you press a photo out of game sequence.</li>
+            </ul>
+            <p id="good-luck">Play the Game! Good Luck!</p>
+        </div>
+    </div>   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
-    <!-- <script type="text/javascript" src="assets/js/jquery-3.2.1.js"></script> -->
-    <script type="text/javascript" src="assets/js/jquery-3.6.0.js"></script>
 </body>
 
 </html>

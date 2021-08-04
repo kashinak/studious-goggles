@@ -31,6 +31,8 @@ function reset() {
 //upon clicking startButton, game console clears and new game sequence is played
 startButton.addEventListener("click", startGame);
 
+// startButton.addEventListener("")
+
 function startGame() {
     startButton.innerHTML = "Start Game!";
     startButton.innerHTML = "";
@@ -235,7 +237,13 @@ function check() {
   //condition if player's moves are wrong
     if (ace == false) { 
       flashYellow();
-      roundCount.innerHTML = "YOU LOSE!";
+      setTimeout(function() { 
+        roundCount.innerHTML = "YOU LOSE!";
+        document.getElementById("lose-game-sound").play();
+   
+
+      }, 2200);
+   
       setTimeout(function() { 
         roundCount.innerHTML = round;
         clearColor();
@@ -262,9 +270,35 @@ function check() {
   //function if player has won the game
   function winGame() {
     flashYellow();
-    roundCount.innerHTML = "CONGRATS! YOU WIN!";
+  
     //user cannot click any of the tiles while run = false
     run = false; 
     win = true;
+    setTimeout(function() { 
+      document.getElementById("win-game-sound").play();
+      roundCount.innerHTML = "CONGRATS! YOU WIN!";
+
+    }, 1400);
+
   }
   
+//initialize bootstrap popovers
+  // $(function () {
+  //   $('[data-toggle="popover"]').popover()
+  // })
+
+  //code snippet from 'Jack' on Stack Overflow https://stackoverflow.com/questions/13202762/html-inside-twitter-bootstrap-popover  and JSFiddle http://jsfiddle.net/z824fn6b/
+
+  $(function(){
+    $("[data-toggle=popover]").popover({
+        html : true,
+        content: function() {
+          var content = $(this).attr("data-popover-content");
+          return $(content).children(".popover-body").html();
+        },
+        title: function() {
+          var title = $(this).attr("data-popover-content");
+          return $(title).children(".popover-header").html();
+        }
+    });
+});

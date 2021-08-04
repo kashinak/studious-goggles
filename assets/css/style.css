@@ -54,7 +54,7 @@ header, h2 {
 }
 #game-area {
     margin-top: 55px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 /* code snippet modeled after from https://codeinstitute.com/ Rosie resume tutorial */
@@ -91,43 +91,6 @@ header, h2 {
   z-index: 1;
 } 
 
-/* code snipper from Code Insitutute 'Method Chaining - Challenge 2' */
-/* #wrapper {
-    box-sizing: border-box;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1050px;
-}
-
-@media screen and (min-width: 1200px) {
-    #wrapper {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-column-gap: 10px;
-    }
-} */
-
-/* code snipper from Code Insitutute 'Method Chaining - Challenge 2' */
-/* .card {
-    margin-top: 10px;
-    padding: 20px;
-    background-color: #00008b;
-}
-
-.card p {
-    text-align: center;
-    font-weight: bold;
-    font-size: large;
-}
-
-#instructions {
-    margin-bottom: 15px;
-    margin-top: 45px;
-    display: none;
-}
-#how-to-div {
-    margin-bottom: 0px;
-} */
 
 
 
@@ -135,6 +98,12 @@ header, h2 {
     padding: 0;
     border: 10px solid #00ffff;
 }
+
+/* .myFlexedImage {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  } */
 
 /* @media screen and (max-width: 380px) {
     #game-photo-1, #game-photo-2, #game-photo-3, #game-photo-4 {
@@ -147,18 +116,22 @@ header, h2 {
 
 #game-photo-1 {
     background: url("../images/beluga.jpeg");
+    background-position-x: 30%;
 }
 
 #game-photo-2 {
     background: url("../images/orca.jpeg");
+    background-position-x: 30%;
 }
 
 #game-photo-3 {
     background: url("../images/rightwhale.jpeg");
+    background-position-x: 30%;
 } 
 
 #game-photo-4 {
     background: url("../images/spermwhale.jpeg");
+    background-position-x: 87%;
 }
 
 .my-col {
@@ -166,8 +139,8 @@ header, h2 {
 }
 
 #score-board {
-    top: 30px; 
-    font-size: 25px; 
+    top: 30px;
+    font-size: 20px;
     border:2px solid;
     text-transform:uppercase;
     font-family: 'Michroma';
@@ -176,8 +149,9 @@ header, h2 {
 
 #round {
     top: 30px; 
-    font-size: 35px; 
+    font-size: 30px;
     border:2px solid;
+    border-top: none;
     text-transform:uppercase;
     font-family: 'Michroma';
     background: #0000ff;
@@ -224,6 +198,12 @@ header, h2 {
       #game-area {
         margin-top: 10px;
     }
+    #game-photo-1, #game-photo-2, #game-photo-3, #game-photo-4 {
+      
+        min-height: 340px;
+        width: inherit;
+        background-size: cover;
+        }
   }
 
 @media screen and (max-width: 540px) {
@@ -240,6 +220,8 @@ header, h2 {
       }
     #game-photo-1, #game-photo-2, #game-photo-3, #game-photo-4 {
       min-height: 180px;
+      width: inherit;
+      background-size: cover;
       }
     #game-area, .row, .panel p {
         font-size: 17px;
@@ -247,4 +229,48 @@ header, h2 {
     .btn, .btn-lg, .btn-warning {
           font-size: 17px;
       }
+      #round {
+          font-size: 25px;
+      }
   }
+
+@media screen and (max-width: 360px) {
+   
+    #score-board {
+        top: 10px;
+     
+    }
+    
+    #round {
+        top: 10px; 
+        font-size: 20px;
+        min-height: 15px;
+    }
+    #game-area {
+        margin-bottom: 10px;
+    }
+}
+
+.hidden {
+    display:none;
+}
+
+.popover-header {
+    background-color: blue;
+    font-weight: bold;
+}
+
+.popover-body{
+    padding: .5rem .75rem;
+    color: #00ffef;
+    background-color: darkblue;
+}
+
+#good-luck {
+    font-weight: bold;
+}
+
+
+
+
+
