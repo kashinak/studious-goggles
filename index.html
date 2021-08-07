@@ -21,6 +21,8 @@
 </head>
 
 <body>
+     <!-- The video -->
+   
     <header>
         <div class="header">
             <div class="row">
@@ -32,6 +34,15 @@
         </div>
     </header>
     <div class="container" id="game-area">
+        <!-- <div class="row">
+            <div class="col-12">
+                <video autoplay muted loop id="myVideo">
+                    <source src="/assets/video/animated_wave_23mb.mp4" type="video/mp4">
+                </video>
+
+            </div>
+        </div> -->
+     
         <div class="row">
             <div class="col-6 panel" id="topleft">
                 <button class="btn myFlexedImage" id="game-photo-1">
@@ -68,13 +79,12 @@
                 <h1></h1>
             </div> -->
         </div>
-
     </div>
     <!-- modeled code after Exeideas tutorial on responsive tables https://www.exeideas.com/2020/10/simple-responsive-html-table.html#Customization -->
     <div class="container">
         <div class="row">
             <div class="col my-col">
-                <button type="button" class="btn btn-outline-warning" id="reset-button">game reset</button>
+                <button type="button" class="btn btn-outline-warning" id="reset-button">game restart</button>
             </div>
             <div class="col my-col">
                   <!-- Popover #1 -->
@@ -114,22 +124,23 @@
         </div>
     </div>   
     <div id="opacityD">
-        <!-- The video -->
-        <video autoplay muted loop id="myVideo">
+        <!-- <video autoplay muted loop id="myPopup">
             <source src="/assets/video/animated_wave_23mb.mp4" type="video/mp4">
-        </video>
+        </video> -->
     </div>
+
+
     <div id="result">
         <div id="popBody">
-            <div id="imgDiv"><img src="/assets/images/whale_icon.png"></div>
+            <div id="imgDiv"><img src="/assets/images/thumbs_up.png"></div>
             <h1 id="h1Res">Congratulations! You Win!</h1>
             <p id="pRes">You've scored 20 rounds!</p>
-
         </div>
         <div id="popOkay">
             <div id="okayButton"><button>Great!</button></div>
         </div>
     </div>
+   
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>

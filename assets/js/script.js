@@ -20,6 +20,7 @@ const bottomLeft = document.getElementById("bottomleft");
 const bottomRight = document.getElementById("bottomright"); 
 // const onButton = document.getElementById("on"); 
 const resetGame = document.getElementById('reset-button'); 
+const result = document.getElementById.ById('result');
 
 //game reset
 resetGame.addEventListener("click", reset)
