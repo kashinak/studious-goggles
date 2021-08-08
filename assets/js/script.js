@@ -20,7 +20,12 @@ const bottomLeft = document.getElementById("bottomleft");
 const bottomRight = document.getElementById("bottomright"); 
 // const onButton = document.getElementById("on"); 
 const resetGame = document.getElementById('reset-button'); 
-const result = document.getElementById.ById('result');
+//Udemy tutorial 2d Game Develpoment w/Javascript & CSS3 - Create Memory Game
+const result = document.getElementById('result');
+const opacityD = document.getElementById('opacityD');
+const h1Res = document.getElementById("h1Res");
+const pRes = document.getElementById("pRes");
+
 
 //game reset
 resetGame.addEventListener("click", reset)
@@ -239,8 +244,9 @@ function check() {
     if (ace == false) { 
       flashYellow();
       setTimeout(function() { 
-        roundCount.innerHTML = "YOU LOSE!";
-        document.getElementById("lose-game-sound").play();
+        // roundCount.innerHTML = "YOU LOSE!";
+        // document.getElementById("lose-game-sound").play();
+        displayResult();
    
 
       }, 2200);
@@ -276,8 +282,9 @@ function check() {
     run = false; 
     win = true;
     setTimeout(function() { 
-      document.getElementById("win-game-sound").play();
-      roundCount.innerHTML = "CONGRATS! YOU WIN!";
+      // document.getElementById("win-game-sound").play();
+      // roundCount.innerHTML = "CONGRATS! YOU WIN!";
+      displayResult();
 
     }, 1400);
 
@@ -303,3 +310,36 @@ function check() {
         }
     });
 });
+
+// Make the fancy display for results
+//Udemy tutorial 2d Game Develpoment w/Javascript & CSS3 - Create Memory Game
+function displayResult() {
+  gameOver = true;
+  let width = window.innerWidth;
+  opacityD.style.display = "block";
+  result.style.display = "block";
+  result.style.left = (width/2) - (500/2) + "px"; //when a number is concatinated with a string it becomes a string//
+  result.style.top = 250 + "px";
+
+  if(userPlay.length == 3) {
+    h1Res.innerHTML = "Congratulations! You won!";
+    pRes.innerHTML = "You've scored " + round + " out of 3 rounds.";
+    document.getElementById("win-game-sound").play();
+  }
+  else {
+    h1Res.innerHTML = "Try again!";
+    pRes.innerHTML = "You've scored " + round + " out of 3 rounds.";
+    document.getElementById("lose-game-sound").play();
+  }
+  
+}
+
+displayResult();
+
+const okayButton = document.getElementById("okayButton");
+okayButton.addEventListener("click", okayClick);
+
+function okayClick() {
+  result.style.display = "none";
+  opacityD.style.display = "none";
+}

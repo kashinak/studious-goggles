@@ -31,14 +31,14 @@ body {
 
 /* Style the video: 100% width and height to cover the entire window. 
 code tip from: https://www.w3schools.com/howto/howto_css_fullscreen_video.asp */
-/* #myVideo {
+#myVideo {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: -20;
-  } */
+  }
 
 
 header {
@@ -210,6 +210,10 @@ header, h2 {
     background-color: #00008b;
     border-color: #01ffff;
 }
+
+#reset-button #how-to-play{
+    cursor: pointer;
+}
   
 @media screen and (max-width: 768px) {
     header, h1 {
@@ -298,21 +302,23 @@ header, h2 {
 
 /*results display*/
 
-/* #opacityD, #result {
+#opacityD, #result {
     display: none;
 
+}
 
-} */
+#myPopup {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+      /*myPopup is always going to be responsive because 
+    no matter how large or small the screen is the div 
+    is going to take up entire height and width of screen at 100%*/
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 10;
 
-#opacityD {
-  position: fixed;
-  top: 0;
-  left: 0; 
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index: 10;
-  opacity:.8;
+
 }
 
 #result {
@@ -320,64 +326,87 @@ header, h2 {
   position: fixed;
   width: 500px;
   height: auto;
-  bottom: 500px;
-  left: 500px;
+  /* bottom: 500px;  */
+  /* left: 500px;  */
   /* padding: 2px; */
-  border: 2px solid #511519;
-  border-radius: 7px;
+  /* border: 2px solid #511519;
+  border-radius: 7px; */
 }
 
 #popBody {
     background-color: white;
-    height: 250px;
+    height: 300px;
     border-style: solid;
     border-width: 2px 2px 0px 2px;
-    border-color: #511519;
+    border-color: darkblue;
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
 }
 
 #imgDiv {
     position: relative;
-    top: 10px; /*10px from the top of the parent element 'popBody'*/
-    width: 100px;
-    height: 107px;
-    margin: 20px auto; 
+    top: 0; /*10px from the top of the parent element 'popBody'*/
+    /* width: 100px;
+    height: 107px; */
+    margin: 2px auto; 
+    width: 320px;
+    height: 180px;
 }
 
-imgDiv img {
-    width: 100px;
-    height: 107px;
+#imgDiv img {
+    width: 320px;
+    height: 180px;
 }
 
 #h1Res {
-    margin: 0px 12px 12px 12px;
-    font-family: cursive; 
+    margin: 0px 2px 2px 2px;
+    font-family: 'FishOutOfWaterBold', Arial, sans-serif;
 
-    font-size: 40px;
+    font-size: 40px; /*my code otherwise the font is too large*/
 
     text-align: center;
-    color: #4d0000;
+    color: darkblue;
 }
 
 #pRes {
-    color: #4d0000;
+    color: darkblue;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: 'Michroma';
 }
 
 #popOkay {
     height: 100px;
-    background-color: #cf4a53;
+    background-color: #3ac8ff;
     padding: 25px;
     border-style: solid;
     border-width: 0px 2px 2px 2px;
-    border-color: #511519;
+    border-color: darkblue;
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
 }
+
 #okayButton {
     height: 50px;
     width: 95px;
-    margin:auto;
+    margin: 0px auto;
+    z-index: 12;
 }
+
+/* the button has to take up the height and width of the parent div element*/
+#okayButton button {
+    height: 50px;
+    width: 95px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Michroma';
+    background-color: darkblue;
+    color: white;
+    box-shadow: 0px 2px 2px 0.5px rgba(0,0,0,0.5);
+    border: none;
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none; /*set ouline to none so whne I click on a button it does not produce an outline*/
+}
+
